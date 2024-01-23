@@ -19,13 +19,13 @@ interface GreeterLocalVars {
 type GreeterThis = Service<GreeterSettings> & GreeterMethods & GreeterLocalVars;
 
 const GreeterService: ServiceSchema<GreeterSettings> = {
-	name: "greeter",
+	name: "fhir",
 
 	/**
 	 * Settings
 	 */
 	settings: {
-		defaultName: "Moleculer",
+		defaultName: "Fhir",
 	},
 
 	/**
@@ -37,23 +37,13 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 	 * Actions
 	 */
 	actions: {
-		hello: {
+		add: {
 			rest: {
-				method: "GET",
-				path: "/hello",
+				method: "POST",
+				path: "/",
 			},
-			handler(this: GreeterThis/* , ctx: Context */): string {
-				return `Hello ${this.settings.defaultName}`;
-			},
-		},
-
-		welcome: {
-			rest: "GET /welcome/:name",
-			params: {
-				name: "string",
-			},
-			handler(this: GreeterThis, ctx: Context<ActionHelloParams>): string {
-				return `Welcome, ${ctx.params.name}`;
+			handler(this: GreeterThis, ctx: Context) {
+				return ctx.params;
 			},
 		},
 	},

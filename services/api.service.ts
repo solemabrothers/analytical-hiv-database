@@ -1,5 +1,5 @@
 import type { Context, ServiceSchema } from "moleculer";
-import type { ApiSettingsSchema, GatewayResponse, IncomingRequest, Route } from "moleculer-web";
+import type { ApiSettingsSchema, IncomingRequest, Route } from "moleculer-web";
 import ApiGateway from "moleculer-web";
 
 interface Meta {

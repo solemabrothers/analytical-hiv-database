@@ -1,0 +1,5706 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "identifier": [
+          {
+            "extension": [
+              {
+                "valueReference": {
+                  "reference": "Location/841cb8d9-b662-41ad-9e7f-d476caac48aa",
+                  "display": "Community",
+                  "type": "Location"
+                },
+                "url": "http://fhir.openmrs.org/ext/patient/identifier#location"
+              }
+            ],
+            "system": "http://openclientregistry.org/fhir/sourceid",
+            "use": "official",
+            "id": "fae34300-c21d-431a-b960-44e51ab3eed0",
+            "type": {
+              "coding": [
+                {
+                  "system": "UgandaEMR",
+                  "code": "05a29f94-c0ed-11e2-94be-8c13b969e334"
+                }
+              ],
+              "text": "OpenMRS ID"
+            },
+            "value": "101L9L"
+          },
+          {
+            "use": "usual",
+            "id": "94c679a1-cdb3-470e-b008-cb444d40e952",
+            "type": {
+              "coding": [
+                {
+                  "system": "UgandaEMR",
+                  "code": "e1731641-30ab-102d-86b0-7a5022ba4115"
+                }
+              ],
+              "text": "HIV Clinic No."
+            },
+            "value": "45"
+          }
+        ],
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "09f2a8d0-c3b2-4a9d-ba85-797e7e65412b",
+            "recorded": "2023-07-04T09:49:58.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "valueString": "Uganda",
+                    "url": "http://fhir.openmrs.org/ext/address#address1"
+                  },
+                  {
+                    "valueString": "KALANGALA",
+                    "url": "http://fhir.openmrs.org/ext/address#address2"
+                  },
+                  {
+                    "valueString": "BUJUMBA",
+                    "url": "http://fhir.openmrs.org/ext/address#subcounty"
+                  }
+                ],
+                "url": "http://fhir.openmrs.org/ext/address"
+              }
+            ],
+            "use": "home",
+            "id": "a1698700-2c36-41d7-b26a-46a92d53ad48"
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/Y3K5vv9cdJ7",
+          "identifier": {
+            "system": "https://hmis.health.go.ug/",
+            "use": "official",
+            "value": "Y3K5vv9cdJ7"
+          },
+          "display": "Health Center Name",
+          "type": "Organization"
+        },
+        "gender": "?",
+        "name": [
+          {
+            "given": ["Denis", "Kibuuka"],
+            "use": "official",
+            "id": "50a75677-b263-4735-bc8a-938e4968457f",
+            "family": "Mark"
+          }
+        ],
+        "active": true,
+        "id": "4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+        "birthDate": "1986-07-01",
+        "resourceType": "Patient"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Person",
+        "id": "4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+        "contained": [
+          {
+            "resourceType": "Provenance",
+            "id": "996482e3-915d-42d8-a369-05a785958823",
+            "recorded": "2023-07-04T09:49:58.000+00:00",
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "agent": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "type": "Practitioner",
+                  "display": "Dillon Ira"
+                }
+              }
+            ]
+          }
+        ],
+        "name": [
+          {
+            "id": "50a75677-b263-4735-bc8a-938e4968457f",
+            "family": "Mark",
+            "given": ["Denis", "Kibuuka"]
+          }
+        ],
+        "gender": "?",
+        "birthDate": "1986-07-01",
+        "address": [
+          {
+            "id": "a1698700-2c36-41d7-b26a-46a92d53ad48",
+            "extension": [
+              {
+                "url": "http://fhir.openmrs.org/ext/address",
+                "extension": [
+                  {
+                    "url": "http://fhir.openmrs.org/ext/address#address1",
+                    "valueString": "Uganda"
+                  },
+                  {
+                    "url": "http://fhir.openmrs.org/ext/address#address2",
+                    "valueString": "KALANGALA"
+                  },
+                  {
+                    "url": "http://fhir.openmrs.org/ext/address#address3",
+                    "valueString": "BUJUMBA"
+                  }
+                ]
+              }
+            ],
+            "use": "home"
+          }
+        ],
+        "active": true,
+        "link": [
+          {
+            "target": {
+              "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+              "type": "Patient",
+              "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Person/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8"
+      }
+    },
+    {
+      "resource": {
+        "serviceType": {
+          "coding": [
+            {
+              "code": "dcd87b79-30ab-102d-86b0-7a5022ba4115",
+              "display": "MEDICAL OUTPATIENT"
+            }
+          ],
+          "text": "Out-Patient"
+        },
+        "partOf": {
+          "reference": "Encounter/1053c5f2-2026-4ef2-8784-7953990f87fa",
+          "type": "Encounter"
+        },
+        "period": {
+          "start": "2023-07-03T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://fhir.openmrs.org/code-system/encounter-type",
+                "code": "8d5b27bc-c2cc-11de-8d13-0010c6dffd0f",
+                "display": "ART Card - Summary"
+              }
+            ]
+          }
+        ],
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/9416bc8b-ef40-4de0-9aaa-4b9a738bc726",
+              "identifier": {
+                "value": "7-5"
+              },
+              "display": "Lillian Lysandra (Identifier: 7-5)",
+              "type": "Practitioner"
+            }
+          }
+        ],
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "9bee63a1-096f-4265-af68-00a7f5cbb7c6",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "system": "http://fhir.openmrs.org/ext/encounter-tag",
+              "code": "encounter",
+              "display": "Encounter"
+            }
+          ]
+        },
+        "serviceProvider": {
+          "reference": "Organization/Y3K5vv9cdJ7",
+          "identifier": {
+            "system": "https://hmis.health.go.ug/",
+            "use": "official",
+            "value": "Y3K5vv9cdJ7"
+          },
+          "display": "Health Center Name",
+          "type": "Organization"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/629d78e9-93e5-43b0-ad8a-48313fd99117",
+              "display": "Health Center Name",
+              "type": "Location"
+            }
+          }
+        ],
+        "id": "870f35ad-6854-4766-bf69-112dc3b80b4d",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "resourceType": "Encounter",
+        "status": "unknown"
+      },
+      "request": {
+        "method": "POST"
+      }
+    },
+    {
+      "resource": {
+        "serviceType": {
+          "coding": [
+            {
+              "code": "dcd87b79-30ab-102d-86b0-7a5022ba4115",
+              "display": "MEDICAL OUTPATIENT"
+            }
+          ],
+          "text": "Out-Patient"
+        },
+        "partOf": {
+          "reference": "Encounter/1053c5f2-2026-4ef2-8784-7953990f87fa",
+          "type": "Encounter"
+        },
+        "period": {
+          "start": "2023-07-03T00:00:00+00:00"
+        },
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://fhir.openmrs.org/code-system/encounter-type",
+                "code": "8d5b2be0-c2cc-11de-8d13-0010c6dffd0f",
+                "display": "ART Card - Encounter"
+              }
+            ]
+          }
+        ],
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/10625cc1-9de9-40c9-b175-9a44ac1a559e",
+              "identifier": {
+                "value": "14-1"
+              },
+              "display": "Dennis Kyle (Identifier: 14-1)",
+              "type": "Practitioner"
+            }
+          }
+        ],
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "c4d0b834-35cb-414b-a6f5-f33cd000903a",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "system": "http://fhir.openmrs.org/ext/encounter-tag",
+              "code": "encounter",
+              "display": "Encounter"
+            }
+          ]
+        },
+        "serviceProvider": {
+          "reference": "Organization/Y3K5vv9cdJ7",
+          "identifier": {
+            "system": "https://hmis.health.go.ug/",
+            "use": "official",
+            "value": "Y3K5vv9cdJ7"
+          },
+          "display": "Health Center Name",
+          "type": "Organization"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/629d78e9-93e5-43b0-ad8a-48313fd99117",
+              "display": "Health Center Name",
+              "type": "Location"
+            }
+          }
+        ],
+        "id": "d38b6c74-7330-48e3-9e25-aacef02fe012",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "resourceType": "Encounter",
+        "status": "unknown"
+      },
+      "request": {
+        "method": "POST"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "9e5ac0a8-6041-4feb-8c07-fe522ef5f9ab",
+              "display": "Breast feeding"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99601",
+              "display": "Breast feeding"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "db3d56f3-1b3f-4a69-924c-590757a1ea2b",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dcda5179-30ab-102d-86b0-7a5022ba4115",
+              "display": "PREGNANT"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90041",
+              "display": "PREGNANT"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "0061efa4-9f2c-4c2d-a18f-9064764f1cfd",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dca1269d-30ab-102d-86b0-7a5022ba4115",
+              "display": "BEYOND DETECTABLE LIMIT"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "1306",
+              "display": "BEYOND DETECTABLE LIMIT"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "b925097b-e52e-447c-93f7-c166bb583fb7",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dca12261-30ab-102d-86b0-7a5022ba4115",
+              "display": "VIRAL LOAD QUALITATIVE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "1305",
+              "display": "VIRAL LOAD QUALITATIVE"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "0480b2d4-3073-485c-b00b-b4c1daffa5cf",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dcd68a88-30ab-102d-86b0-7a5022ba4115",
+              "display": "OTHER SPECIFY"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90002",
+              "display": "OTHER SPECIFY"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "95c78249-60e4-46d6-861b-e6285cc5b445",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "927563c5-cb91-4536-b23c-563a72d3f829",
+              "display": "Special Category"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165169",
+              "display": "Special Category"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "1ac2ee76-1e50-48ab-9bde-32e89e352adb",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dcdaaf0f-30ab-102d-86b0-7a5022ba4115",
+              "display": "Suspect TB - referred or sputum sent"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90073",
+              "display": "Suspect TB - referred or sputum sent"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "33c2b5cc-b862-4f52-bfe7-72c9d3534f4c",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dce02aa1-30ab-102d-86b0-7a5022ba4115",
+              "display": "TUBERCULOSIS STATUS"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90216",
+              "display": "TUBERCULOSIS STATUS"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "1d6ba9f1-7f73-48ae-a616-c7e53c74ba1a",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "9cb908cf-4169-4911-946f-ce67fd1a1b2c",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dcdffef2-30ab-102d-86b0-7a5022ba4115",
+              "display": "NAME OF LOCATION TRANSFERRED FROM"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90206",
+              "display": "NAME OF LOCATION TRANSFERRED FROM"
+            }
+          ]
+        },
+        "valueString": "testing",
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "237d61d2-2597-4885-b0e1-c161eef69e79",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "ddcd8aad-9085-4a88-a411-f19521be4785",
+              "display": "HIV TEST"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99080",
+              "display": "HIV TEST"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "febc7079-888f-419b-913a-187f1afed672",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "ddcd8aad-9085-4a88-a411-f19521be4785",
+              "display": "HIV TEST"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99080",
+              "display": "HIV TEST"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "26f838b4-0142-442a-b582-aff45188ab9f",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Never"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "1090",
+              "display": "Never"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "589c416a-a268-4ae9-ac72-d61518740059",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "37d4ac43-b3b4-4445-b63b-e3acf47c8910",
+              "display": "TPT STATUS"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165288",
+              "display": "TPT STATUS"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "2b8184bd-244b-439e-a4a6-395f5f9a5664",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Yes"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "373066001",
+              "display": "Yes"
+            },
+            {
+              "system": "https://openconceptlab.org/orgs/CIEL/sources/CIEL",
+              "code": "1065",
+              "display": "Yes"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "1065",
+              "display": "Yes"
+            },
+            {
+              "system": "PIH",
+              "code": "1065",
+              "display": "null"
+            },
+            {
+              "system": "SNOMED CT",
+              "code": "373066001",
+              "display": "null"
+            },
+            {
+              "system": "PIH Malawi",
+              "code": "1065",
+              "display": "null"
+            },
+            {
+              "system": "CIEL",
+              "code": "1065",
+              "display": "null"
+            },
+            {
+              "system": "AMPATH",
+              "code": "1065",
+              "display": "null"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "8535c531-c85f-49ad-808d-e28f62e4ec79",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "ede98e0d-0e04-49c6-b6bd-902ad759a084",
+              "display": "Intention to conceive in the next 3 months"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165316",
+              "display": "Intention to conceive in the next 3 months"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "31693adb-1418-4063-8c4d-fc1b395e2e37",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "edc9a044-6df9-4ae0-a2d1-6354e479c707",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "ab505422-26d9-41f1-a079-c3d222000440",
+              "display": "BASELINE REGIMEN START DATE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99161",
+              "display": "BASELINE REGIMEN START DATE"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "valueDateTime": "2023-07-04T00:00:00+00:00",
+        "id": "3207f18a-a770-4812-99c7-7a9f9d89f487",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "581ba2ce-3bcb-4b33-abed-ef7366ad1a8e",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dcac04cf-30ab-102d-86b0-7a5022ba4115",
+              "display": "RETURN VISIT DATE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "5096",
+              "display": "RETURN VISIT DATE"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "valueDateTime": "2023-07-13T00:00:00+00:00",
+        "id": "35e1ebe9-abd0-4d46-b68a-590e10d51c5e",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "e06ac289-2920-4b85-80c9-805c69b6e5a9",
+              "display": "ART Refill"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "164972",
+              "display": "ART Refill"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "3bd5313e-4c84-4ea5-8583-a426357f1ca5",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "160288AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Reason for appointment/visit"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "160288",
+              "display": "Reason for appointment/visit"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "3f87533f-7a6d-4f34-92db-d7aba2500b33",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dd2b3eee-30ab-102d-86b0-7a5022ba4115",
+              "display": "AZT-3TC-EFV"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99006",
+              "display": "AZT-3TC-EFV"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "7cbdfdc4-2635-43d3-b2bc-a14006ea6e47",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9a9314ed-0756-45d0-b37c-ace720ca439c",
+              "display": "TRANSFER IN REGIMEN"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99064",
+              "display": "TRANSFER IN REGIMEN"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "44966f90-e8e8-40c9-8a30-2b110eb1e7b4",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "80bdf631-0373-4c72-8e0c-185d05e9fbe2",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "0f998893-ab24-4ee4-922a-f197ac5fd6e6",
+              "display": "Lab Number"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165845",
+              "display": "Lab Number"
+            }
+          ]
+        },
+        "valueString": "2334",
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "4b706e2e-d820-4596-b145-58434e9beafe",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "2f48a11e-3625-4e44-ad8f-21ba1ab64f9a",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dce12b4f-30ab-102d-86b0-7a5022ba4115",
+              "display": "DATE POSITIVE HIV TEST CONFIRMED"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90267",
+              "display": "DATE POSITIVE HIV TEST CONFIRMED"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "valueDateTime": "2023-06-06T00:00:00+00:00",
+        "id": "4e1b913c-e2f0-401f-9cd9-c817e16e7d91",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dd2b3eee-30ab-102d-86b0-7a5022ba4115",
+              "display": "AZT-3TC-EFV"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99006",
+              "display": "AZT-3TC-EFV"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "a29e5f29-7123-471b-b655-783105a01480",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "c3332e8d-2548-4ad6-931d-6855692694a3",
+              "display": "BASELINE REGIMEN"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99061",
+              "display": "BASELINE REGIMEN"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "4ed304df-317b-48d1-9263-15ea91b2cec2",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "77cd3409-b088-42dd-af70-47673b222042",
+              "display": "Refill"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "164969",
+              "display": "Refill"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "b3e5c43a-40cb-4b3c-8f0b-bff8adb06853",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "160288AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Reason for appointment/visit"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "160288",
+              "display": "Reason for appointment/visit"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "53936440-35b9-43f9-9542-0e52a9719fa0",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "4819d7d3-2f85-4d15-97a9-b430bea29b5c",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "93b2347e-e590-11e9-81b4-2a2ae2dbcce4",
+              "display": "DAPSONE-CTX MEDSET"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165304",
+              "display": "DAPSONE-CTX MEDSET"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "hasMember": [
+          {
+            "reference": "Observation/c6ed2f8c-c3ad-4956-a339-f4006e1b45f2",
+            "type": "Observation"
+          }
+        ],
+        "id": "55798470-fe49-460f-8bcd-0bdf0e91c480",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "a41c27c0-d203-4d14-94e2-c7ebcfb8adc5",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "67dbf985-6156-45f0-8b10-9ca6ba3053fd",
+              "display": "RPR Test"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "19869000",
+              "display": "RPR Test"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165417",
+              "display": "RPR Test"
+            },
+            {
+              "system": "SNOMED CT",
+              "code": "19869000",
+              "display": "Rapid Plasma Reagin Test Procedure"
+            }
+          ]
+        },
+        "valueString": "NOT DONE",
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "hasMember": [
+          {
+            "reference": "Observation/d938c0b4-a51a-4f25-9a49-9798bacc2ea1",
+            "type": "Observation"
+          }
+        ],
+        "id": "5acea66c-8452-472f-b468-7a3bd6a12712",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dc9825cf-30ab-102d-86b0-7a5022ba4115",
+              "display": "NOT DONE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "1118",
+              "display": "NOT DONE"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "91a3c13b-c48b-439b-9495-cbf67212f414",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "162202AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Tuberculosis polymerase chain reaction with rifampin resistance checking"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "162202",
+              "display": "Tuberculosis polymerase chain reaction with rifampin resistance checking"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "5eef3124-bdef-4f6f-957b-03fd7cc89d1b",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dc9b0596-30ab-102d-86b0-7a5022ba4115",
+              "display": "NOT APPLICABLE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "1175",
+              "display": "NOT APPLICABLE"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "851df5e0-8582-4dfb-90c4-e691cefdba20",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "43c33e93-90ff-406b-b7b2-9c655b2a561a",
+              "display": "CRAG TEST RESULTS"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165290",
+              "display": "CRAG TEST RESULTS"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "6057b48b-b017-4543-9f34-4179a97b6b87",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "e398f011-bfba-444a-a3e5-aab6d2300ffa",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "referenceRange": [
+          {
+            "high": {
+              "value": 4000
+            },
+            "low": {
+              "value": 0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dcbcba2c-30ab-102d-86b0-7a5022ba4115",
+              "display": "CD4 COUNT"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "5497",
+              "display": "CD4 COUNT"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "632f59c5-7b6e-4856-9f78-e46fd1b9e877",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final",
+        "valueQuantity": {
+          "value": 15
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "f4308421-5814-4473-b50b-0fc43aa157b7",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5827cc4c-8b35-483e-a460-9b76885cf9de",
+              "display": "TB LAM"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165416",
+              "display": "TB LAM"
+            }
+          ]
+        },
+        "valueString": "NOT APPLICABLE",
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "hasMember": [
+          {
+            "reference": "Observation/f069f7a3-5693-4027-80f7-dc4b43a90593",
+            "type": "Observation"
+          }
+        ],
+        "id": "635dd96b-c619-4b8c-9082-4ab24d54438b",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dc9b0596-30ab-102d-86b0-7a5022ba4115",
+              "display": "NOT APPLICABLE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "1175",
+              "display": "NOT APPLICABLE"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "e59f4914-535f-48a5-8682-0ba0910baa34",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5029d903-51ba-4c44-8745-e97f320739b6",
+              "display": "CERVICAL CANCER SCREENING"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165315",
+              "display": "CERVICAL CANCER SCREENING"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "64b0f827-d019-4d23-9890-a7fbc4a6133e",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Sputum"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "45710003",
+              "display": "Sputum"
+            },
+            {
+              "system": "https://openconceptlab.org/orgs/CIEL/sources/CIEL",
+              "code": "1004",
+              "display": "Sputum"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "1004",
+              "display": "Sputum"
+            },
+            {
+              "system": "SNOMED CT",
+              "code": "45710003",
+              "display": "null"
+            },
+            {
+              "system": "AMPATH",
+              "code": "1004",
+              "display": "null"
+            },
+            {
+              "system": "org.openmrs.module.mdrtb",
+              "code": "SPUTUM",
+              "display": "null"
+            },
+            {
+              "system": "CIEL",
+              "code": "1004",
+              "display": "null"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "e5f78175-ed1c-4d2d-b725-064b4f88ac29",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "162476AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Specimen sources"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "246087005",
+              "display": "Specimen sources"
+            },
+            {
+              "system": "https://openconceptlab.org/orgs/CIEL/sources/CIEL",
+              "code": "162476",
+              "display": "Specimen sources"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "162476",
+              "display": "Specimen sources"
+            },
+            {
+              "system": "SNOMED CT",
+              "code": "246087005",
+              "display": "null"
+            },
+            {
+              "system": "CIEL",
+              "code": "162476",
+              "display": "null"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "64bae96b-5c6e-4a64-ab97-81312cb7305e",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dc85aa72-30ab-102d-86b0-7a5022ba4115",
+              "display": "NEGATIVE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "664",
+              "display": "NEGATIVE"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "1c2011bf-b7eb-4a18-81f8-08ae5635f510",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "215d1c92-43f4-4aee-9875-31047f30132c",
+              "display": "TB Microscopy Results"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165414",
+              "display": "TB Microscopy Results"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "6ddb6fb1-f9d8-4629-a830-11436fc1edf7",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dcddab4c-30ab-102d-86b0-7a5022ba4115",
+              "display": "FATIGUE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90093",
+              "display": "FATIGUE"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "a2b41491-c4ef-474b-8cbd-fe0f02fcdad6",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dce05b7f-30ab-102d-86b0-7a5022ba4115",
+              "display": "MEDICATION OR OTHER SIDE EFFECTS"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90227",
+              "display": "MEDICATION OR OTHER SIDE EFFECTS"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "70aa26ea-43e0-44f5-8273-a46107811fba",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dc9b8cd1-30ab-102d-86b0-7a5022ba4115",
+              "display": "WHO STAGE 1 ADULT"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "1204",
+              "display": "WHO STAGE 1 ADULT"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "e328373a-268d-42d3-8db0-f020496ed1d8",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "39243cef-b375-44b1-9e79-cbf21bd10878",
+              "display": "BASELINE STAGE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99070",
+              "display": "BASELINE STAGE"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "79f672cc-2155-4a9c-9ad0-519adb55069c",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dcd69c06-30ab-102d-86b0-7a5022ba4115",
+              "display": "NO"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90004",
+              "display": "NO"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "bab251a3-fafd-40b7-ad3b-a604e24bd09f",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "b253be65-0155-4b43-ad15-88bc797322c9",
+              "display": "BASELINE PREGNANCY"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99072",
+              "display": "BASELINE PREGNANCY"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "7ec1ed79-79ae-4d81-92ca-440a5e0dec98",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "f5b1d80e-3164-475e-8142-94c8b1807ff0",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "0b434cfa-b11c-4d14-aaa2-9aed6ca2da88",
+              "display": "HIV VIRAL LOAD DATE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "163023",
+              "display": "HIV VIRAL LOAD DATE"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "valueDateTime": "2023-07-03T00:00:00+00:00",
+        "id": "84008d74-db00-4c06-a611-038a242b3821",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dcd69c06-30ab-102d-86b0-7a5022ba4115",
+              "display": "NO"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90004",
+              "display": "NO"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "59e86467-f9e3-4b29-9a90-2d576655d8b1",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "ab7bb4db-1a54-4225-b71c-d8e138b471e9",
+              "display": "BASELINE LACTATING"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99603",
+              "display": "BASELINE LACTATING"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "89213c68-f5ea-442f-8346-d9a94c9c318f",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dc692ad3-30ab-102d-86b0-7a5022ba4115",
+              "display": "CONDOMS"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "190",
+              "display": "CONDOMS"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "11479ec0-627e-4a06-803b-c2eef1f4af03",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dc7620b3-30ab-102d-86b0-7a5022ba4115",
+              "display": "METHOD OF FAMILY PLANNING"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "374",
+              "display": "METHOD OF FAMILY PLANNING"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "8d5c0d32-880f-4421-a7ef-d3191c8ed81e",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "e9ea62b0-a399-4ccc-80c6-c2beff87ae02",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9d21d953-fbef-4fa7-b209-f2977b33153d",
+              "display": "TRANSFER IN REGIMEN SET"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99065",
+              "display": "TRANSFER IN REGIMEN SET"
+            }
+          ]
+        },
+        "valueString": "AZT-3TC-EFV, testing, 2023-07-03",
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "hasMember": [
+          {
+            "reference": "Observation/44966f90-e8e8-40c9-8a30-2b110eb1e7b4",
+            "type": "Observation"
+          },
+          {
+            "reference": "Observation/237d61d2-2597-4885-b0e1-c161eef69e79",
+            "type": "Observation"
+          },
+          {
+            "reference": "Observation/f98187e6-be1e-40cc-a06f-0577040e493d",
+            "type": "Observation"
+          }
+        ],
+        "id": "924588ec-dfde-4a40-8f57-a08fb06e24ca",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "cfb53860-785e-4fc8-85bc-5b19427c2822",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "e525c286-74b2-4e30-84ac-c4d5f07c503c",
+              "display": "BASELINE REGIMEN SET"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99162",
+              "display": "BASELINE REGIMEN SET"
+            }
+          ]
+        },
+        "valueString": "AZT-3TC-EFV, 2023-07-04",
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "hasMember": [
+          {
+            "reference": "Observation/4ed304df-317b-48d1-9263-15ea91b2cec2",
+            "type": "Observation"
+          },
+          {
+            "reference": "Observation/3207f18a-a770-4812-99c7-7a9f9d89f487",
+            "type": "Observation"
+          }
+        ],
+        "id": "9ab21818-330a-4ebd-9fc6-d530be523faf",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "b2aaddc7-a049-4eab-b91d-05ee850ffc87",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5faffe89-397e-470c-a32b-e07d962d01b3",
+              "display": "TB Microscopy Test"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "117259009",
+              "display": "TB Microscopy Test"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "10526-2",
+              "display": "TB Microscopy Test"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165415",
+              "display": "TB Microscopy Test"
+            },
+            {
+              "system": "SNOMED CT",
+              "code": "117259009",
+              "display": "Microscopy Procedure"
+            },
+            {
+              "system": "LOINC",
+              "code": "10526-2",
+              "display": "Microscopic observation [Identifier] in Sputum by Cyto stain"
+            }
+          ]
+        },
+        "valueString": "NEGATIVE",
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "hasMember": [
+          {
+            "reference": "Observation/6ddb6fb1-f9d8-4629-a830-11436fc1edf7",
+            "type": "Observation"
+          }
+        ],
+        "id": "9bc1aa9d-862a-42af-bf14-d001a2410603",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "238cbd7f-27b0-46d3-9353-9fbee52b9b9a",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dc8d83e3-30ab-102d-86b0-7a5022ba4115",
+              "display": "HIV VIRAL LOAD"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "856",
+              "display": "HIV VIRAL LOAD"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "a0ba6f8b-82c0-448c-a64c-7112c9fd81a4",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final",
+        "valueQuantity": {
+          "unit": "copies/ml",
+          "value": 1
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dcdd6c4a-30ab-102d-86b0-7a5022ba4115",
+              "display": "NOT PREGNANT AND ON FAMILY PLANNING"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90082",
+              "display": "NOT PREGNANT AND ON FAMILY PLANNING"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "cc4c198c-829d-4a6c-aa43-5f6f712cd8fb",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dce0a659-30ab-102d-86b0-7a5022ba4115",
+              "display": "FAMILY PLANNING STATUS"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90238",
+              "display": "FAMILY PLANNING STATUS"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "a2c45652-36e8-48c6-b6a8-4069b676a5c8",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "eb611c36-f481-4dcd-9928-ecb5a68eaa58",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "eac4e9c2-a086-43fc-8d43-b5a4e02febb4",
+              "display": "Other Special Category"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165184",
+              "display": "Other Special Category"
+            }
+          ]
+        },
+        "valueString": "test",
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "ab9a6410-9910-4799-a541-2ba208b56cbc",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "bbcb2814-8ef7-40cc-ad82-0bb5acefecb1",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "daebb483-4eef-42b5-9380-7dbfec2ef6ce",
+              "display": "Crag Test"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "103094002",
+              "display": "Crag Test"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165418",
+              "display": "Crag Test"
+            },
+            {
+              "system": "SNOMED CT",
+              "code": "103094002",
+              "display": "crAg (C)"
+            }
+          ]
+        },
+        "valueString": "NOT APPLICABLE",
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "hasMember": [
+          {
+            "reference": "Observation/6057b48b-b017-4543-9f34-4179a97b6b87",
+            "type": "Observation"
+          }
+        ],
+        "id": "b4ed0c08-90c5-45aa-869c-245405475610",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "8999a65c-b209-408a-a15c-05053645cc1c",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "referenceRange": [
+          {
+            "high": {
+              "value": 100
+            },
+            "low": {
+              "value": 1
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dc86e9fb-30ab-102d-86b0-7a5022ba4115",
+              "display": "CD4%"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "730",
+              "display": "CD4%"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "b7962a0f-772e-42ac-9991-c8595c4e18b8",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final",
+        "valueQuantity": {
+          "unit": "%",
+          "value": 2
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "No"
+            },
+            {
+              "system": "https://openconceptlab.org/orgs/CIEL/sources/CIEL",
+              "code": "1066",
+              "display": "No"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "373067005",
+              "display": "No"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "1066",
+              "display": "No"
+            },
+            {
+              "system": "PIH",
+              "code": "1066",
+              "display": "null"
+            },
+            {
+              "system": "PIH Malawi",
+              "code": "1066",
+              "display": "null"
+            },
+            {
+              "system": "AMPATH",
+              "code": "1066",
+              "display": "null"
+            },
+            {
+              "system": "CIEL",
+              "code": "1066",
+              "display": "null"
+            },
+            {
+              "system": "SNOMED CT",
+              "code": "373067005",
+              "display": "null"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "df85dba2-f326-4d30-81cb-cc139411ea4e",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "c3d744f6-00ef-4774-b9a7-d33c58f5b014",
+              "display": "Cotrim Given"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99413",
+              "display": "Cotrim Given"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "c6ed2f8c-c3ad-4956-a339-f4006e1b45f2",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "73313c96-c321-11e8-a355-529269fb1459",
+              "display": "Facility Based Groups"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165140",
+              "display": "Facility Based Groups"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "7987a4ec-0ff3-4568-b995-2256e48604fd",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "73312fee-c321-11e8-a355-529269fb1459",
+              "display": "Differentiated Service Delivery"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165143",
+              "display": "Differentiated Service Delivery"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "d1e6f5c3-0677-47a2-9895-2ae6fafb0d9a",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dcdebc02-30ab-102d-86b0-7a5022ba4115",
+              "display": "ULCERS"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90139",
+              "display": "ULCERS"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "978e7d48-b628-44b5-b69c-7c541b989527",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dce0e02a-30ab-102d-86b0-7a5022ba4115",
+              "display": "SYMPTOM, DIAGNOSIS, OR OPPORTUNISTIC INFECTION"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90251",
+              "display": "SYMPTOM, DIAGNOSIS, OR OPPORTUNISTIC INFECTION"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "d8e5dfff-c4ba-4e3f-8caf-a9adb4fe673e",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dc9825cf-30ab-102d-86b0-7a5022ba4115",
+              "display": "NOT DONE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "1118",
+              "display": "NOT DONE"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "a8299f72-fb90-412e-ab29-ba743b2faac4",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "d462b4f6-fb37-4e19-8617-e5499626c234",
+              "display": "RPR TEST RESULTS"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165289",
+              "display": "RPR TEST RESULTS"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "d938c0b4-a51a-4f25-9a49-9798bacc2ea1",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "615041ca-9d61-4046-bd27-380af04d9a7c",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "2cf5644d-73a7-42f2-b18c-f773f40b648c",
+              "display": "GeneXpert Test"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165413",
+              "display": "GeneXpert Test"
+            }
+          ]
+        },
+        "valueString": "NOT DONE",
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "hasMember": [
+          {
+            "reference": "Observation/5eef3124-bdef-4f6f-957b-03fd7cc89d1b",
+            "type": "Observation"
+          }
+        ],
+        "id": "de509549-b75b-455c-95dc-142dc183ae5b",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dcd87b79-30ab-102d-86b0-7a5022ba4115",
+              "display": "MEDICAL OUTPATIENT"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90013",
+              "display": "MEDICAL OUTPATIENT"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "d5d363cc-fb36-4d7b-a48b-361d329333a0",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dcdfe3ce-30ab-102d-86b0-7a5022ba4115",
+              "display": "ENTRY POINT INTO HIV CARE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90200",
+              "display": "ENTRY POINT INTO HIV CARE"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "e1b4e05e-6574-49f5-b7d3-fe816afb67d2",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dcdf1708-30ab-102d-86b0-7a5022ba4115",
+              "display": "GOOD ADHERENCE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90156",
+              "display": "GOOD ADHERENCE"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "ae228ab5-0439-4a16-be1f-3990ca1daa9f",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dce03b2f-30ab-102d-86b0-7a5022ba4115",
+              "display": "ANTI-RETROVIRAL DRUG ADHERENCE ASSESSMENT CODE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "90221",
+              "display": "ANTI-RETROVIRAL DRUG ADHERENCE ASSESSMENT CODE"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "e5d8ed1e-020f-4886-a5a7-72bbd5edc438",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "dce22951-7a82-4351-a4a5-589c3e1ca892",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dc824b7b-30ab-102d-86b0-7a5022ba4115",
+              "display": "CD4 PANEL"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "313938009",
+              "display": "CD4 PANEL"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "657",
+              "display": "CD4 PANEL"
+            },
+            {
+              "system": "SNOMED CT",
+              "code": "313938009",
+              "display": "CD4 Percent Count"
+            }
+          ]
+        },
+        "valueString": "2.0, 15.0",
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "hasMember": [
+          {
+            "reference": "Observation/b7962a0f-772e-42ac-9991-c8595c4e18b8",
+            "type": "Observation"
+          },
+          {
+            "reference": "Observation/632f59c5-7b6e-4856-9f78-e46fd1b9e877",
+            "type": "Observation"
+          }
+        ],
+        "id": "f0273aaa-53de-4424-8daf-7370b1aed665",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "dc9b0596-30ab-102d-86b0-7a5022ba4115",
+              "display": "NOT APPLICABLE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "1175",
+              "display": "NOT APPLICABLE"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "4f59f09c-5dfd-437c-bcd4-01126997158d",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "066b84a0-e18f-4cdd-a0d7-189454f4c7a4",
+              "display": "TB LAM RESULTS"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165291",
+              "display": "TB LAM RESULTS"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "f069f7a3-5693-4027-80f7-dc4b43a90593",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "cdbe0fe5-d6cd-4da0-8fad-5238ee2fac0c",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "cabfa0e9-ddae-438b-a052-6d5c97164242",
+              "display": "CARE ENTRY POINT SET"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99116",
+              "display": "CARE ENTRY POINT SET"
+            }
+          ]
+        },
+        "valueString": "MEDICAL OUTPATIENT",
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "hasMember": [
+          {
+            "reference": "Observation/e1b4e05e-6574-49f5-b7d3-fe816afb67d2",
+            "type": "Observation"
+          }
+        ],
+        "id": "f4f7993f-163d-4ad3-bee6-5d38b21b4685",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "d150af43-1ec1-49b0-a642-841096410b83",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "1eb05918-f50c-4cad-a827-3c78f296a10a",
+              "display": "Viral Load Test"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "315124004",
+              "display": "Viral Load Test"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165412",
+              "display": "Viral Load Test"
+            },
+            {
+              "system": "LOINC",
+              "code": "315124004",
+              "display": "Viral Load Test"
+            }
+          ]
+        },
+        "valueString": "BEYOND DETECTABLE LIMIT, 2023-07-03, 1",
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "hasMember": [
+          {
+            "reference": "Observation/0480b2d4-3073-485c-b00b-b4c1daffa5cf",
+            "type": "Observation"
+          },
+          {
+            "reference": "Observation/84008d74-db00-4c06-a611-038a242b3821",
+            "type": "Observation"
+          },
+          {
+            "reference": "Observation/a0ba6f8b-82c0-448c-a64c-7112c9fd81a4",
+            "type": "Observation"
+          }
+        ],
+        "id": "f770be8f-3d12-4626-b248-667e33692a63",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "357cc253-d714-466a-a6e0-078618f6e751",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "f363f153-f659-438b-802f-9cc1828b5fa9",
+              "display": "TRANSFER IN REGIMEN START DATE"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99160",
+              "display": "TRANSFER IN REGIMEN START DATE"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "valueDateTime": "2023-07-03T00:00:00+00:00",
+        "id": "f98187e6-be1e-40cc-a06f-0577040e493d",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "17506891-633d-419e-97f5-f66f1dba96f0",
+            "recorded": "2023-07-04T21:17:57.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "referenceRange": [
+          {
+            "high": {
+              "value": 4000
+            },
+            "low": {
+              "value": 0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "c17bd9df-23e6-4e65-ba42-eb6d9250ca3f",
+              "display": "BASELINE CD4"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "99071",
+              "display": "BASELINE CD4"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "faab82e9-14f8-4480-adda-32f675393bcc",
+        "encounter": {
+          "reference": "Encounter/870f35ad-6854-4766-bf69-112dc3b80b4d",
+          "type": "Encounter"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "issued": "2023-07-04T21:17:57.000+00:00",
+        "resourceType": "Observation",
+        "status": "final",
+        "valueQuantity": {
+          "value": 43
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST"
+      },
+      "resource": {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1eb05918-f50c-4cad-a827-3c78f296a10a",
+              "display": "Viral Load Test"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "315124004",
+              "display": "Viral Load Test"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "165412",
+              "display": "Viral Load Test"
+            },
+            {
+              "system": "LOINC",
+              "code": "315124004",
+              "display": "Viral Load Test"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                        "code": "AUT",
+                        "display": "author"
+                      }
+                    ]
+                  }
+                ],
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                      "code": "author",
+                      "display": "Author"
+                    }
+                  ]
+                },
+                "who": {
+                  "reference": "Practitioner/0a24b51e-07a6-11e6-8087-b8ca3ad60d42",
+                  "display": "Dillon Ira",
+                  "type": "Practitioner"
+                }
+              }
+            ],
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "id": "f3e13edb-aa82-4f37-9704-aee0e5c8403d",
+            "recorded": "2023-07-04T21:21:25.000+00:00",
+            "resourceType": "Provenance"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "dca07f4a-30ab-102d-86b0-7a5022ba4115",
+              "display": "TESTS ORDERED"
+            },
+            {
+              "system": "UgandaEMR",
+              "code": "1271",
+              "display": "TESTS ORDERED"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-07-03T00:00:00+00:00",
+        "subject": {
+          "reference": "Patient/4b4a0e26-4a25-4234-8ec5-8a5e6c380cf8",
+          "display": "Denis Kibuuka Mark (OpenMRS ID: 101L9L)",
+          "type": "Patient"
+        },
+        "id": "fecb4e5f-58fc-41d3-a34f-95cedf97758a",
+        "encounter": {
+          "reference": "Encounter/d38b6c74-7330-48e3-9e25-aacef02fe012",
+          "type": "Encounter"
+        },
+        "issued": "2023-07-04T21:21:25.000+00:00",
+        "resourceType": "Observation",
+        "status": "final"
+      }
+    }
+  ]
+}

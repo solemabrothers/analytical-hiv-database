@@ -4,7 +4,7 @@
   "description": "My Moleculer-based microservices project",
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
-    "dev": "ts-node ./node_modules/moleculer/bin/moleculer-runner.js --config moleculer.config.ts --hot --repl services/**/*.service.ts",
+    "dev": "ts-node ./node_modules/moleculer/bin/moleculer-runner.js --config moleculer.config.ts --hot --repl --env services/**/*.service.ts",
     "start": "moleculer-runner --config dist/moleculer.config.js",
     "test:types": "concurrently npm:prettier npm:lint npm:typecheck",
     "typecheck": "tsc --noEmit && echo \"tsc: no typecheck errors\"",
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@jest/globals": "^29.3.1",
     "@types/jest": "^29.2.3",
+    "@types/lodash": "^4.14.202",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
@@ -42,11 +43,17 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
+    "@types/pg": "^8.10.9",
+    "@types/pg-format": "^1.0.5",
+    "bull": "^4.12.2",
     "dotenv": "^16.3.2",
+    "lodash": "^4.17.21",
     "moleculer": "^0.14.27",
     "moleculer-db": "^0.8.21",
     "moleculer-db-adapter-mongo": "^0.4.16",
-    "moleculer-web": "^0.10.5"
+    "moleculer-web": "^0.10.5",
+    "pg": "^8.11.3",
+    "pg-format": "^1.0.4"
   },
   "engines": {
     "node": ">= 16.x.x"

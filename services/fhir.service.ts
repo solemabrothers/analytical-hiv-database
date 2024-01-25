@@ -44,34 +44,26 @@ const pool = new Pool({
 
 const fhirQueue = new Bull<{
 	data: { encounters: string[][]; patients: string[][] };
-	logger: LoggerInstance;
+	// logger: LoggerInstance;
 }>("fhir");
 
-const insert = async ({
-	data,
-	logger,
-}: {
-	data: { encounters: string[][]; patients: string[][] };
-	logger: LoggerInstance;
-}) => {
+const insert = async ({ data }: { data: { encounters: string[][]; patients: string[][] } }) => {
 	const connection = await pool.connect();
 	try {
-		const r1 = await connection.query(
+		await connection.query(
 			format(
 				`INSERT INTO staging_patient (case_id,sex,date_of_birth,deceased,date_of_death,facility_id,patient_clinic_no) VALUES %L ON CONFLICT (case_id) DO UPDATE SET sex = EXCLUDED.sex,date_of_birth = EXCLUDED.date_of_birth,deceased = EXCLUDED.deceased,date_of_death = EXCLUDED.date_of_death,facility_id = EXCLUDED.facility_id,patient_clinic_no = EXCLUDED.patient_clinic_no;`,
 				data.patients,
 			),
 		);
-		logger.info(r1.rowCount);
-		const r2 = await connection.query(
+		await connection.query(
 			format(
-				"INSERT INTO staging_patient_encounters(case_id,encounter_id,encounter_date,facility_id,encounter_type,obs) VALUES %L ON CONFLICT (encounter_id) DO UPDATE SET case_id = EXCLUDED.case_id,encounter_date = EXCLUDED.encounter_date,facility_id = EXCLUDED.facility_id,encounter_type = EXCLUDED.encounter_type,ob=EXCLUDED.obs",
-				data,
+				"INSERT INTO staging_patient_encounters(case_id,encounter_id,encounter_date,facility_id,encounter_type,obs) VALUES %L ON CONFLICT (encounter_id) DO UPDATE SET case_id = EXCLUDED.case_id,encounter_date = EXCLUDED.encounter_date,facility_id = EXCLUDED.facility_id,encounter_type = EXCLUDED.encounter_type,obs=EXCLUDED.obs",
+				data.encounters,
 			),
 		);
-		logger.info(r2.rowCount);
 	} catch (error) {
-		logger.error(error.message);
+		console.log(error);
 	} finally {
 		connection.release();
 	}
@@ -102,7 +94,7 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 				method: "POST",
 				path: "/",
 			},
-			handler(this: GreeterThis, ctx: Context<Record<string, any>>) {
+			async handler(this: GreeterThis, ctx: Context<Record<string, any>>) {
 				const patients: string[][] = this.processPatients(
 					ctx.params.entry.filter(
 						(entry: any) => entry.resource.resourceType === "Patient",
@@ -118,25 +110,23 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 						(entry: any) => entry.resource.resourceType === "Observation",
 					),
 				);
+
+				const data = {
+					patients,
+					encounters: encounters.map((e) => {
+						const encounterId = e[1];
+						this.logger.info(encounterId);
+						const encounterObs = fromPairs(
+							observations
+								.filter((o) => o.encounterId === encounterId)
+								.map((currentObs: any) => [currentObs.obs_name, currentObs]),
+						);
+						return [...e, JSON.stringify(encounterObs)];
+					}),
+				};
 				return fhirQueue.add(
 					{
-						data: {
-							patients,
-							encounters: encounters.map((e) => {
-								const encounterId = e[1];
-								this.logger.info(encounterId);
-								const encounterObs = fromPairs(
-									observations
-										.filter((o) => o.encounterId === encounterId)
-										.map((currentObs: any) => [
-											currentObs.obs_name,
-											currentObs,
-										]),
-								);
-								return [...e, JSON.stringify(encounterObs)];
-							}),
-						},
-						logger: this.logger,
+						data,
 					},
 					{ priority: 1 },
 				);

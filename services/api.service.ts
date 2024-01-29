@@ -1,3 +1,4 @@
+import { compareSync } from "bcryptjs";
 import type { Context, ServiceSchema } from "moleculer";
 import type { ApiSettingsSchema, IncomingRequest, Route } from "moleculer-web";
 import ApiGateway from "moleculer-web";
@@ -35,7 +36,7 @@ const ApiService: ServiceSchema<ApiSettingsSchema> = {
 				mergeParams: true,
 
 				// Enable authentication. Implement the logic into `authenticate` method. More info: https://moleculer.services/docs/0.14/moleculer-web.html#Authentication
-				authentication: false,
+				authentication: true,
 
 				// Enable authorization. Implement the logic into `authorize` method. More info: https://moleculer.services/docs/0.14/moleculer-web.html#Authorization
 				authorization: false,
@@ -106,7 +107,6 @@ const ApiService: ServiceSchema<ApiSettingsSchema> = {
 		// Serve assets from "public" folder. More info: https://moleculer.services/docs/0.14/moleculer-web.html#Serve-static-files
 		assets: {
 			folder: "public",
-
 			// Options to `server-static` module
 			options: {},
 		},
@@ -120,31 +120,22 @@ const ApiService: ServiceSchema<ApiSettingsSchema> = {
 		 *
 		 * PLEASE NOTE, IT'S JUST AN EXAMPLE IMPLEMENTATION. DO NOT USE IN PRODUCTION!
 		 */
-		authenticate(
-			ctx: Context,
-			route: Route,
-			req: IncomingRequest,
-		): Record<string, unknown> | null {
-			// Read the token from header
-			const auth = req.headers.authorization;
-
-			if (auth && auth.startsWith("Bearer")) {
-				const token = auth.slice(7);
-
-				// Check the token. Tip: call a service which verify the token. E.g. `accounts.resolveToken`
-				if (token === "123456") {
-					// Returns the resolved user. It will be set to the `ctx.meta.user`
-					return { id: 1, name: "John Doe" };
+		authenticate(ctx: Context, route: Route, req: IncomingRequest) {
+			const authentication = req.headers.authorization;
+			if (authentication) {
+				const auth = Buffer.from(authentication.split(" ")[1], "base64").toString();
+				const result = compareSync(auth, process.env.HASH ?? "");
+				if (!result) {
+					throw new ApiGateway.Errors.UnAuthorizedError(
+						ApiGateway.Errors.ERR_INVALID_TOKEN,
+						"Username and/or password is not correct",
+					);
 				}
-				// Invalid token
+			} else {
 				throw new ApiGateway.Errors.UnAuthorizedError(
 					ApiGateway.Errors.ERR_INVALID_TOKEN,
-					null,
+					"No username or password provided",
 				);
-			} else {
-				// No token. Throw an error or do nothing if anonymous access is allowed.
-				// throw new E.UnAuthorizedError(E.ERR_NO_TOKEN);
-				return null;
 			}
 		},
 

@@ -22,6 +22,7 @@
   "author": "",
   "devDependencies": {
     "@jest/globals": "^29.3.1",
+    "@types/bcryptjs": "^2.4.6",
     "@types/jest": "^29.2.3",
     "@types/lodash": "^4.14.202",
     "@types/node": "^18.11.9",
@@ -45,6 +46,7 @@
   "dependencies": {
     "@types/pg": "^8.10.9",
     "@types/pg-format": "^1.0.5",
+    "bcryptjs": "^2.4.3",
     "bull": "^4.12.2",
     "dotenv": "^16.3.2",
     "lodash": "^4.17.21",

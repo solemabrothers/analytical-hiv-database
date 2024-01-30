@@ -81,11 +81,11 @@ const ApiService: ServiceSchema<ApiSettingsSchema> = {
 				bodyParsers: {
 					json: {
 						strict: false,
-						limit: "1MB",
+						limit: "10MB",
 					},
 					urlencoded: {
 						extended: true,
-						limit: "1MB",
+						limit: "10MB",
 					},
 				},
 

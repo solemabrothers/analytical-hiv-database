@@ -5,7 +5,6 @@ import Bull from "bull";
 import { fromPairs } from "lodash";
 import type {
 	Context,
-	LoggerInstance,
 	Service,
 	ServiceSchema,
 	ServiceSettingSchema,
@@ -51,7 +50,9 @@ const insert = async ({ data }: { data: { encounters: string[][]; patients: stri
 	try {
 		await connection.query(
 			format(
-				`INSERT INTO staging_patient (case_id,sex,date_of_birth,deceased,date_of_death,facility_id,patient_clinic_no) VALUES %L ON CONFLICT (case_id) DO UPDATE SET sex = EXCLUDED.sex,date_of_birth = EXCLUDED.date_of_birth,deceased = EXCLUDED.deceased,date_of_death = EXCLUDED.date_of_death,facility_id = EXCLUDED.facility_id,patient_clinic_no = EXCLUDED.patient_clinic_no;`,
+				`INSERT INTO staging_patient ( case_id,sex,date_of_birth,deceased,date_of_death,facility_id,patient_clinic_no,patient_name,phone_number)
+                            VALUES %L ON CONFLICT (case_id) DO UPDATE SET sex = EXCLUDED.sex,date_of_birth = EXCLUDED.date_of_birth,deceased = EXCLUDED.deceased,date_of_death = EXCLUDED.date_of_death,
+                            facility_id = EXCLUDED.facility_id,patient_clinic_no = EXCLUDED.patient_clinic_no,patient_name=EXCLUDED.patient_name,phone_number=EXCLUDED.phone_number;`,
 				data.patients,
 			),
 		);
@@ -163,10 +164,12 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 					case_id: patient.resource.id,
 					sex: patient.resource.gender,
 					date_of_birth: patient.resource.birthDate,
+					patient_name: "",
 					deceased: patient.resource.deceasedBoolean,
 					date_of_death: patient.resource.deceasedDateTime || null,
 					facility_id: "",
 					patient_clinic_number: null,
+					phone_number: null,
 				};
 
 				if (patient.resource.identifier) {
@@ -180,6 +183,22 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 							patient_clinic_number: patientClinicNo.value,
 						};
 					}
+				}
+				if (patient.resource.name) {
+					const givenName = patient.resource.name[0]?.given?.[0] || "";
+					const familyName = patient.resource.name[0]?.family || "";
+					const patientName = `${givenName} ${familyName}`;
+					patientInfo = {
+						...patientInfo,
+						patient_name: patientName.trim()
+					};
+				}
+				if (patient.resource.telecom) {
+					const telecomValue = patient.resource.telecom[0].value;
+					patientInfo = {
+						...patientInfo,
+						phone_number: telecomValue
+					};
 				}
 
 				if (patient.resource.managingOrganization) {
@@ -211,6 +230,8 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 						patientInfo.date_of_death,
 						patientInfo.facility_id,
 						patientInfo.patient_clinic_number,
+						patientInfo.patient_name,
+						patientInfo.phone_number
 					]);
 				}
 			}

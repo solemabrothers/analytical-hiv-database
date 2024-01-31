@@ -93,22 +93,38 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 				method: "POST",
 				path: "/",
 			},
-			async handler(this: GreeterThis, ctx: Context<Record<string, any>>) {
-				const patients: string[][] = this.processPatients(
-					ctx.params.entry.filter(
-						(entry: any) => entry.resource.resourceType === "Patient",
-					),
-				);
-				const encounters: string[][] = this.processEncounters(
-					ctx.params.entry.filter(
-						(entry: any) => entry.resource.resourceType === "Encounter",
-					),
-				);
-				const observations: any[] = this.processObs(
-					ctx.params.entry.filter(
-						(entry: any) => entry.resource.resourceType === "Observation",
-					),
-				);
+			handler(this: GreeterThis, ctx: Context<Record<string, any>>) {
+				let allPatients: any[] = [];
+				let allObservations: any[] = [];
+				let allEncounters: any[] = [];
+				ctx.params.entry.forEach((entry: any) => {
+					if (entry.resource && entry.resource.resourceType === "Patient") {
+						allPatients = [...allPatients, entry];
+					}
+
+					if (entry.resourceType && entry.resourceType === "Patient") {
+						allPatients = [...allPatients, { resource: entry }];
+					}
+					if (entry.resource && entry.resource.resourceType === "Encounter") {
+						allEncounters = [...allEncounters, entry];
+					}
+
+					if (entry.resourceType && entry.resourceType === "Encounter") {
+						allEncounters = [...allEncounters, { resource: entry }];
+					}
+
+					if (entry.resource && entry.resource.resourceType === "Observation") {
+						allObservations = [...allObservations, entry];
+					}
+
+					if (entry.resourceType && entry.resourceType === "Observation") {
+						allObservations = [...allObservations, { resource: entry }];
+					}
+				});
+
+				const patients: string[][] = this.processPatients(allPatients);
+				const encounters: string[][] = this.processEncounters(allEncounters);
+				const observations: any[] = this.processObs(allObservations);
 
 				const data = {
 					patients,
@@ -140,6 +156,7 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 	 */
 	methods: {
 		processPatients(patients) {
+			this.logger.info("Are we here");
 			const processedPatient = [];
 			for (const patient of patients) {
 				let patientInfo = {

@@ -3,12 +3,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Bull from "bull";
 import { fromPairs } from "lodash";
-import type {
-	Context,
-	Service,
-	ServiceSchema,
-	ServiceSettingSchema,
-} from "moleculer";
+import type { Context, Service, ServiceSchema, ServiceSettingSchema } from "moleculer";
 import { Pool } from "pg";
 import format from "pg-format";
 
@@ -190,14 +185,14 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 					const patientName = `${givenName} ${familyName}`;
 					patientInfo = {
 						...patientInfo,
-						patient_name: patientName.trim()
+						patient_name: patientName.trim(),
 					};
 				}
 				if (patient.resource.telecom) {
 					const telecomValue = patient.resource.telecom[0].value;
 					patientInfo = {
 						...patientInfo,
-						phone_number: telecomValue
+						phone_number: telecomValue,
 					};
 				}
 
@@ -231,7 +226,7 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 						patientInfo.facility_id,
 						patientInfo.patient_clinic_number,
 						patientInfo.patient_name,
-						patientInfo.phone_number
+						patientInfo.phone_number,
 					]);
 				}
 			}
@@ -253,9 +248,7 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 						valueDateTime,
 						encounter: { reference: ref },
 						effectiveDateTime,
-						code: {
-							coding: [{ display: obsName, code }, { code: code2 }],
-						},
+						code,
 						subject: { reference },
 					} = bundle.resource;
 					let realValue =
@@ -272,13 +265,16 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 					}
 					const patient = String(reference).split("/")[1];
 					const encounterId = String(ref).split("/")[1];
-					if (realValue) {
+					if (realValue && code && code.coding && code.coding.length > 1) {
+						const {
+							coding: [{ display: obsName, code: code1 }, { code: code2 }],
+						} = code;
 						obs.push({
 							id,
 							patient,
 							encounterId,
 							code: code2,
-							uuid: code,
+							uuid: code1,
 							obs_name: obsName,
 							realValue,
 							effectiveDateTime,

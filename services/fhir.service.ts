@@ -94,54 +94,55 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 				path: "/",
 			},
 			handler(this: GreeterThis, ctx: Context<Record<string, any>>) {
-				let allPatients: any[] = [];
-				let allObservations: any[] = [];
-				let allEncounters: any[] = [];
-				ctx.params.entry.forEach((entry: any) => {
-					if (entry.resource && entry.resource.resourceType === "Patient") {
-						allPatients = [...allPatients, entry];
-					}
-
-					if (entry.resourceType && entry.resourceType === "Patient") {
-						allPatients = [...allPatients, { resource: entry }];
-					}
-					if (entry.resource && entry.resource.resourceType === "Encounter") {
-						allEncounters = [...allEncounters, entry];
-					}
-
-					if (entry.resourceType && entry.resourceType === "Encounter") {
-						allEncounters = [...allEncounters, { resource: entry }];
-					}
-
-					if (entry.resource && entry.resource.resourceType === "Observation") {
-						allObservations = [...allObservations, entry];
-					}
-
-					if (entry.resourceType && entry.resourceType === "Observation") {
-						allObservations = [...allObservations, { resource: entry }];
-					}
-				});
-
-				const patients: string[][] = this.processPatients(allPatients);
-				const encounters: string[][] = this.processEncounters(allEncounters);
-				const observations: any[] = this.processObs(allObservations);
-
-				const data = {
-					patients,
-					encounters: encounters.map((e) => {
-						const encounterId = e[1];
-						this.logger.info(encounterId);
-						const encounterObs = fromPairs(
-							observations
-								.filter((o) => o.encounterId === encounterId)
-								.map((currentObs: any) => [currentObs.obs_name, currentObs]),
-						);
-						return [...e, JSON.stringify(encounterObs)];
-					}),
-				};
-				return fhirQueue.add({
-					data,
-				});
+				// let allPatients: any[] = [];
+				// let allObservations: any[] = [];
+				// let allEncounters: any[] = [];
+				// ctx.params.entry.forEach((entry: any) => {
+				// 	if (entry.resource && entry.resource.resourceType === "Patient") {
+				// 		allPatients = [...allPatients, entry];
+				// 	}
+				//
+				// 	if (entry.resourceType && entry.resourceType === "Patient") {
+				// 		allPatients = [...allPatients, { resource: entry }];
+				// 	}
+				// 	if (entry.resource && entry.resource.resourceType === "Encounter") {
+				// 		allEncounters = [...allEncounters, entry];
+				// 	}
+				//
+				// 	if (entry.resourceType && entry.resourceType === "Encounter") {
+				// 		allEncounters = [...allEncounters, { resource: entry }];
+				// 	}
+				//
+				// 	if (entry.resource && entry.resource.resourceType === "Observation") {
+				// 		allObservations = [...allObservations, entry];
+				// 	}
+				//
+				// 	if (entry.resourceType && entry.resourceType === "Observation") {
+				// 		allObservations = [...allObservations, { resource: entry }];
+				// 	}
+				// });
+				//
+				// const patients: string[][] = this.processPatients(allPatients);
+				// const encounters: string[][] = this.processEncounters(allEncounters);
+				// const observations: any[] = this.processObs(allObservations);
+				//
+				// const data = {
+				// 	patients,
+				// 	encounters: encounters.map((e) => {
+				// 		const encounterId = e[1];
+				// 		this.logger.info(encounterId);
+				// 		const encounterObs = fromPairs(
+				// 			observations
+				// 				.filter((o) => o.encounterId === encounterId)
+				// 				.map((currentObs: any) => [currentObs.obs_name, currentObs]),
+				// 		);
+				// 		return [...e, JSON.stringify(encounterObs)];
+				// 	}),
+				// };
+				// return fhirQueue.add({
+				// 	data,
+				// });
+				return ctx.params
 			},
 		},
 	},

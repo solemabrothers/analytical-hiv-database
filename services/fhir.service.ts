@@ -43,25 +43,24 @@ const fhirQueue = new Bull<{
 const insert = async ({ data }: { data: { encounters: string[][]; patients: string[][] } }) => {
 	const connection = await pool.connect();
 	try {
-		// if (data.patients.length > 0) {
-		// 	await connection.query(
-		// 		format(
-		// 			`INSERT INTO staging_patient ( case_id,sex,date_of_birth,deceased,date_of_death,facility_id,patient_clinic_no,patient_name,phone_number)
-		//                     VALUES %L ON CONFLICT (case_id) DO UPDATE SET sex = EXCLUDED.sex,date_of_birth = EXCLUDED.date_of_birth,deceased = EXCLUDED.deceased,date_of_death = EXCLUDED.date_of_death,
-		//                     facility_id = EXCLUDED.facility_id,patient_clinic_no = EXCLUDED.patient_clinic_no,patient_name=EXCLUDED.patient_name,phone_number=EXCLUDED.phone_number;`,
-		// 			data.patients,
-		// 		),
-		// 	);
-		// 	if (data.encounters.length > 0) {
-		// 		await connection.query(
-		// 			format(
-		// 				"INSERT INTO staging_patient_encounters(case_id,encounter_id,encounter_date,facility_id,encounter_type,obs) VALUES %L ON CONFLICT (encounter_id) DO UPDATE SET case_id = EXCLUDED.case_id,encounter_date = EXCLUDED.encounter_date,facility_id = EXCLUDED.facility_id,encounter_type = EXCLUDED.encounter_type,obs=EXCLUDED.obs",
-		// 				data.encounters,
-		// 			),
-		// 		);
-		// 	}
-		// }
-		console.log(data);
+		if (data.patients.length > 0) {
+			await connection.query(
+				format(
+					`INSERT INTO staging_patient ( case_id,sex,date_of_birth,deceased,date_of_death,facility_id,patient_clinic_no,patient_name,phone_number)
+		                    VALUES %L ON CONFLICT (case_id) DO UPDATE SET sex = EXCLUDED.sex,date_of_birth = EXCLUDED.date_of_birth,deceased = EXCLUDED.deceased,date_of_death = EXCLUDED.date_of_death,
+		                    facility_id = EXCLUDED.facility_id,patient_clinic_no = EXCLUDED.patient_clinic_no,patient_name=EXCLUDED.patient_name,phone_number=EXCLUDED.phone_number;`,
+					data.patients,
+				),
+			);
+			if (data.encounters.length > 0) {
+				await connection.query(
+					format(
+						"INSERT INTO staging_patient_encounters(case_id,encounter_id,encounter_date,facility_id,encounter_type,obs) VALUES %L ON CONFLICT (encounter_id) DO UPDATE SET case_id = EXCLUDED.case_id,encounter_date = EXCLUDED.encounter_date,facility_id = EXCLUDED.facility_id,encounter_type = EXCLUDED.encounter_type,obs=EXCLUDED.obs",
+						data.encounters,
+					),
+				);
+			}
+		}
 	} catch (error) {
 		console.log(error);
 	} finally {
@@ -143,7 +142,6 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 				return fhirQueue.add({
 					data,
 				});
-				return ctx.params;
 			},
 		},
 	},

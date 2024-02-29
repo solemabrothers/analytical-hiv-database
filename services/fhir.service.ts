@@ -126,23 +126,24 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 				const encounters: string[][] = this.processEncounters(allEncounters);
 				const observations: any[] = this.processObs(allObservations);
 
-				// const data = {
-				// 	patients,
-				// 	encounters: encounters.map((e) => {
-				// 		const encounterId = e[1];
-				// 		this.logger.info(encounterId);
-				// 		const encounterObs = fromPairs(
-				// 			observations
-				// 				.filter((o) => o.encounterId === encounterId)
-				// 				.map((currentObs: any) => [currentObs.obs_name, currentObs]),
-				// 		);
-				// 		return [...e, JSON.stringify(encounterObs)];
-				// 	}),
-				// };
+				const data = {
+					patients,
+					encounters: encounters.map((e) => {
+						const encounterId = e[1];
+						this.logger.info(encounterId);
+						const encounterObs = fromPairs(
+							observations
+								.filter((o) => o.encounterId === encounterId)
+								.map((currentObs: any) => [currentObs.obs_name, currentObs]),
+						);
+						return [...e, JSON.stringify(encounterObs)];
+					}),
+				};
+				this.logger.info(data);
 				// return fhirQueue.add({
 				// 	data,
 				// });
-				return ctx.params
+				return ctx.params;
 			},
 		},
 	},

@@ -31,7 +31,7 @@ const RawFhirService: ServiceSchema = {
 
 				try {
 					await pool.query(
-						`INSERT INTO emr_fhir_bundles (source, data) VALUES ($1, $2)`,
+						`INSERT INTO emr_fhir_resource_bundles (source, data) VALUES ($1, $2)`,
 						[ctx.meta?.source || "UgandaEMR", rawFhirBundle]
 					);
 					return { success: true, message: "FHIR bundle saved successfully." };
